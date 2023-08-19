@@ -9,13 +9,9 @@ let changeColorInterval = null;
 elements.stopBtn.setAttribute('disabled', 'disabled');
 
 function onStartChangeColor() {
-    changeColorInterval = setInterval(changeColor, 1000);
+    changeColorInterval = setInterval(() => {document.body.style.backgroundColor = getRandomHexColor()}, 1000);
     elements.startBtn.setAttribute('disabled', 'disabled');
     elements.stopBtn.removeAttribute('disabled');
-}
-
-function changeColor() {
-    document.body.style.background = getRandomHexColor();
 }
 
 function onStopChangeColor() {
