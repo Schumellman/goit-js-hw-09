@@ -30,8 +30,8 @@ function onSubmitForm(evt) {
 }
 
 function callNumberPromise(delayValue, stepValue, promiseValue) {
-  challengePromises(1, stepValue);
-  for (let i = 0; i < promiseValue; i += 1) {
+  challengePromises(1, delayValue);
+  for (let i = 2; i < promiseValue; i += 1) {
     delayValue += stepValue;
     challengePromises(i, delayValue);
   }
